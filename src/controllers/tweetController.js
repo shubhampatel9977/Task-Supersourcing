@@ -37,12 +37,10 @@ const getTweetById = async (req, res) => {
 
     // Get tweet by id and also checking user
     const tweet = await tweetModel.findOne({ _id: value.tweetId, user: userId});
-
-    if (tweet.length > 0) {
-      return res.status(200).json({ data: tweet });
-    } else {
+    if(!tweet)
       return res.status(400).json({ message: "User or Tweet not found" });
-    }
+
+    return res.status(200).json({ data: tweet });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

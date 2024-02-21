@@ -1,8 +1,6 @@
-
-
 ## Dependencies
 - Node - 20.10.0
-- NPM - 9.5.1
+- NPM - 10.2.3
 - Local mongoDB Running On ("mongodb://localhost:27017")
 
 ## Information
@@ -14,10 +12,11 @@ Tweet feed: Fetch and display a user's tweet feed, including their own tweets an
 ## Setup Project
 ```sh
 Clone -> git clone https://github.com/shubhampatel9977/Task-Supersourcing.git
+Folder Directory -> cd Task-Supersourcing
 Rename -> .env.example To .env
 ```
 
-## Application Start
+## Application Run
 ```sh
 Install Dependencies -> npm install
 Start Project -> npm start || node server.js
