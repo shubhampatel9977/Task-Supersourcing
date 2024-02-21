@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "c7a75c72-1f0d-4399-94eb-7be6290bcdeb",
+		"name": "Task-Supersourcing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "userRoutes",
+			"item": [
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Demo\",\n    \"email\": \"demo@gmail.com\",\n    \"password\": \"demo@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Log In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"demo@gmail.com\",\n    \"password\": \"demo@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Log Out",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDg0MzY4LCJleHAiOjE3MDg1NzA3Njh9.2tyZ-FswdRZgz2tp9CxAWP6JntHUxbyGy9OZnLHXaco",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDE4Mzc3LCJleHAiOjE3MDg1MDQ3Nzd9.BdjGgwX1Pu4Rc0Tdp6vt-TOsVUtVwrwl229D2sLlJzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tweetRoutes",
+			"item": [
+				{
+					"name": "Create Tweet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDcxNDZiYjEyNmVjOWZkMmNkZWRjIiwiaWF0IjoxNzA4NDIyNDg0LCJleHAiOjE3MDg1MDg4ODR9.z0aTt1faTwJ90vEjEcP3pBj3buzPO6dYQd-4gxamzCE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"Demo1 tweet, How are you?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tweet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tweet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tweet By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDIyOTM2LCJleHAiOjE3MDg1MDkzMzZ9.I18CiI3_RsA3u1Pfh-9RR9mpHEcFUmTEzu4jE4q0T8s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tweet/65d466578091cc95cd2b1c99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tweet",
+								"65d466578091cc95cd2b1c99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tweet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDE4Mzc3LCJleHAiOjE3MDg1MDQ3Nzd9.BdjGgwX1Pu4Rc0Tdp6vt-TOsVUtVwrwl229D2sLlJzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"demo, How are you-update2?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tweet/65d466578091cc95cd2b1c99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tweet",
+								"65d466578091cc95cd2b1c99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tweet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDE4Mzc3LCJleHAiOjE3MDg1MDQ3Nzd9.BdjGgwX1Pu4Rc0Tdp6vt-TOsVUtVwrwl229D2sLlJzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tweet/65d466578091cc95cd2b1c99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tweet",
+								"65d466578091cc95cd2b1c99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tweet feed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDIyOTM2LCJleHAiOjE3MDg1MDkzMzZ9.I18CiI3_RsA3u1Pfh-9RR9mpHEcFUmTEzu4jE4q0T8s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tweet/feed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tweet",
+								"feed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "followRoutes",
+			"item": [
+				{
+					"name": "Follow User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDE4Mzc3LCJleHAiOjE3MDg1MDQ3Nzd9.BdjGgwX1Pu4Rc0Tdp6vt-TOsVUtVwrwl229D2sLlJzg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"followUserId\": \"65d47146bb126ec9fd2cdedc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/action/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"action",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnFollow User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVkNDY1MzI4YTAzZGFlNTRmMDJhNmY2IiwiaWF0IjoxNzA4NDIyOTM2LCJleHAiOjE3MDg1MDkzMzZ9.I18CiI3_RsA3u1Pfh-9RR9mpHEcFUmTEzu4jE4q0T8s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"followUserId\": \"65d4713ebb126ec9fd2cded9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/action/unfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"action",
+								"unfollow"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server Testing Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		}
+	]
+}
